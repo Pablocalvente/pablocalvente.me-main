@@ -4,13 +4,12 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Arturo Aguilera González',
-  description: 'Portfolio of Arturo Aguilera González. Web Development, Artificial Intelligence, and Malware Analysis. Explore my projects and skills.',
+  title: "Pablo Calvente | Portfolio",
+  description: 'Impulso negocios con datos. Especialista en Power BI, análisis de datos y optimización de decisiones estratégicas.',
   openGraph: {
-    url: "https://arturoaguilera.es",
-    siteName: "Arturo Aguilera González",
-    description: 'Portfolio of Arturo Aguilera González. Web Development, Artificial Intelligence, and Malware Analysis. Explore my projects and skills.',
-    images: [{ url: "https://www.arturoaguilera.es/images/projects/portfolio.png" }]
+    url: "https://pablocalvente.es",
+    siteName: "Pablo Calvente | Portfolio",
+    description: 'Impulso negocios con datos. Especialista en Power BI, análisis de datos y optimización de decisiones estratégicas.',
   },
 }
 
