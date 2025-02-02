@@ -2,7 +2,7 @@ import HeroSection from "@/es/components/HeroSection";
 import Navbar from "@/es/components/Navbar";
 import AboutSection from "@/es/components/AboutSection";
 import ProjectsSection from "@/es/components/ProjectsSection";
-import EmailSection from "@/es/components/EmailSection";
+import EmailSection from "@/en/components/EmailSection";
 import Footer from "@/components/Footer";
 import AchievementsSection from "@/es/components/AchievementsSection";
 
