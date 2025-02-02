@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import githubIcon from "../../../../public/github-icon.svg";
-import linkedinIcon from "../../../../public/linkedin-icon.svg";
+import linkedinIcon from "/public/linkedin-icon.svg";
+
 
 
 
@@ -69,7 +70,7 @@ const EmailSection = () => {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity duration-300"
             >
-              <Image src={LinkedinIcon} alt="Icono de Linkedin" />
+             <Image src="/linkedin-icon.svg" alt="Icono de Linkedin" width={24} height={24} />
             </Link>
             {/* Si tuvieras GitHub u otra red, podrías añadir más iconos aquí */}
           </div>
