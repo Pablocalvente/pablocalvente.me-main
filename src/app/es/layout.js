@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Pablo Calvente Gómez',
   description: 'Portfolio of Pablo Calvente Gómez. Web Development, Artificial Intelligence, and Malware Analysis. Explore my projects and skills.',
   openGraph: {
-    url: "https://arturoaguilera.es",
+    url: "https://pablocalvente.es",
     siteName: "Pablo Calvente Gómez",
     description: 'Portfolio of Pablo Calvente Gómez. Web Development, Artificial Intelligence, and Malware Analysis. Explore my projects and skills.',
     images: [{ url: "https://www.arturoaguilera.es/images/projects/portfolio.png" }]

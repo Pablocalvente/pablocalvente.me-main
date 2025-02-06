@@ -35,12 +35,13 @@ const HeroSection = () => {
           className="w-full md:w-1/3 flex justify-center"
         >
           <div className="relative w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#18BBB5] overflow-hidden shadow-lg">
-            <Image
-              src="/images/profilephoto.png"
-              alt="Mi foto de perfil"
-              fill
-              className="object-cover"
-            />
+          <Image
+       src="https://pablocalvente.es/images/profilephoto.png"
+        alt="Mi foto de perfil"
+       width={250} // Ajusta según sea necesario
+       height={250}
+        className="object-cover"
+        />  
           </div>
         </motion.div>
 
