@@ -31,9 +31,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed mx-auto top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolling ? "bg-[#121212] shadow-lg" : "bg-[#121212]"
-      }`}
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 
+      ${scrolling ? "bg-[#121212] shadow-lg" : "bg-[#121212]"}`}
+      style={{
+        backgroundColor: "#121212", // ✅ Fondo sólido forzado
+        opacity: 1, // ✅ Evita cualquier transparencia accidental
+        backdropFilter: "none", // ✅ Asegura que no haya blur
+      }}
     >
       <div className="flex container px-4 lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         {/* Enlace de Inicio */}
