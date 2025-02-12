@@ -35,13 +35,29 @@ const HeroSection = () => {
           className="w-full md:w-1/3 flex justify-center"
         >
           <div className="relative w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#18BBB5] overflow-hidden shadow-lg">
-          <Image
-        src="https://pablocalvente.es/images/profilephoto.png"
-         alt="Mi foto de perfil"
-         width={250} // Ajusta según sea necesario
-        height={250}
-        className="object-cover"
-        />
+            
+            {/* Opción 1: Usar imagen local en `public/images/` */}
+            {/* Reemplaza "src" con esta ruta si subiste la imagen a `public/images/` */}
+            <Image
+              src="/images/profilephoto.png"
+              alt="Mi foto de perfil"
+              width={250}
+              height={250}
+              className="object-cover"
+              priority // Para que cargue más rápido
+            />
+
+            {/* Opción 2: Usar imagen externa con `unoptimized` */}
+            {/* Usa esta opción si sigues con la imagen en `pablocalvente.es` */}
+            {/* <Image
+              src="https://pablocalvente.es/images/profilephoto.png"
+              alt="Mi foto de perfil"
+              width={250}
+              height={250}
+              className="object-cover"
+              unoptimized={true} // Evita el error 500 de Next.js
+            /> */}
+
           </div>
         </motion.div>
 
@@ -74,7 +90,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-gray-300 text-center md:text-left text-base md:text-lg max-w-xl mb-6 leading-relaxed">
-          Impulso negocios con datos. Especialista en Power BI, análisis de datos y optimización de decisiones estratégicas. Convierte tu información en resultados reales.
+            Impulso negocios con datos. Especialista en Power BI, análisis de datos y optimización de decisiones estratégicas. Convierte tu información en resultados reales.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
