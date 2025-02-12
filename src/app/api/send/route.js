@@ -4,8 +4,7 @@ import { NextResponse } from "next/server";
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    // Lee las variables de tu .env.local
-    user: process.env.EMAIL_USER,
+    user: process.env.EMAIL_USER, // NO pongas el email aquí directamente
     pass: process.env.EMAIL_PASS,
   },
 });
@@ -15,8 +14,8 @@ export async function POST(req) {
     const { email, subject, message } = await req.json();
 
     const mailOptions = {
-      from: email,
-      to: "pablocalvente.work@gmail.com", // El correo adonde quieres que lleguen los mensajes
+      from: process.env.EMAIL_USER, // Usa la variable de entorno en lugar de pasar `email`
+      to: "pablocalvente.work@gmail.com", 
       subject: `Nuevo mensaje de ${email}: ${subject}`,
       text: message,
     };
