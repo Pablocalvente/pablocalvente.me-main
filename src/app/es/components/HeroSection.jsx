@@ -33,9 +33,9 @@ const HeroSection = () => {
             <Image
               src="https://pablocalvente.es/images/profilephoto.png"
               alt="Mi foto de perfil"
-              width={250}
-              height={250}
-              className="w-full h-full object-cover" // 🔹 Ajuste perfecto en el recuadro
+              layout="fill"  // 🔹 Ocupa todo el espacio del div
+              objectFit="cover" // 🔹 Recorta la imagen correctamente
+              className="rounded-full"
               unoptimized={true}
             />
           </div>
