@@ -3,13 +3,11 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-// Importa el componente
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-[#0C0E12] text-white">
-      {/* Fondo con forma geométrica */}
       <div className="absolute inset-0">
         <svg
           width="100%"
@@ -17,49 +15,29 @@ const HeroSection = () => {
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            fill="#161821"
-            points="0,0 100,0 100,50 0,100"
-            className="opacity-70"
-          />
+          <polygon fill="#161821" points="0,0 100,0 100,50 0,100" className="opacity-70" />
         </svg>
       </div>
 
-      {/* Contenido principal */}
+      {/* Contenedor principal */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto py-16 px-6 gap-12">
         
-        {/* Foto de perfil - Ajuste del diseño */}
+        {/* Foto de perfil corregida */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="flex justify-center items-center w-full md:w-1/3"
         >
-          <div className="relative w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#18BBB5] shadow-lg flex items-center justify-center">
-            
-            {/* Opción 1: Imagen local en `public/images/` */}
-            <Image
-            src="https://pablocalvente.es/images/profilephoto.png"
-            alt="Mi foto de perfil"
-            width={250}
-            height={250}
-            className="object-cover rounded-full"
-            unoptimized={true} // 🔹 Desactiva la optimización de Next.js para evitar error 500
-          />
-
-
-            {/* Opción 2: Imagen externa con `unoptimized` */}
-            {/* 
+          <div className="relative w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#18BBB5] overflow-hidden shadow-lg">
             <Image
               src="https://pablocalvente.es/images/profilephoto.png"
               alt="Mi foto de perfil"
               width={250}
               height={250}
-              className="object-cover rounded-full"
+              className="w-full h-full object-cover" // 🔹 Ajuste perfecto en el recuadro
               unoptimized={true}
             />
-            */}
-
           </div>
         </motion.div>
 
@@ -71,22 +49,20 @@ const HeroSection = () => {
           className="w-full md:w-2/3 flex flex-col items-center md:items-start text-center md:text-left"
         >
           <h1 className="font-bold text-3xl md:text-5xl mb-4 leading-tight font-poppins">
-            {/* Texto estático + animado */}
             <span className="text-white mr-2">Hola, soy</span>
-            {/* Aquí se hace el ciclo de textos */}
             <TypeAnimation
               sequence={[
-                "Pablo Calvente",        // Primero
-                2000,                    // Espera 2s
-                "Analista de datos",     // Segundo
+                "Pablo Calvente",
                 2000,
-                "Consultor BI",          // Tercero
+                "Analista de datos",
                 2000,
-                "Certificado Microsoft", // Cuarto
+                "Consultor BI",
+                2000,
+                "Certificado Microsoft",
                 2000,
               ]}
-              speed={60}          // Velocidad de tipeo
-              repeat={Infinity}   // Repetir para siempre
+              speed={60}
+              repeat={Infinity}
               className="text-[#18BBB5]"
               style={{ display: "inline-block" }}
             />
