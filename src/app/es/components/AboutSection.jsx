@@ -82,31 +82,18 @@ const AboutSection = () => {
 
         {/* Sección en dos columnas */}
         <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* Imagen con solución optimizada */}
+          {/* Imagen con opción externa y `unoptimized` activado */}
           <div className="md:w-1/2 flex justify-center">
             <div className="w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] rounded-lg border-4 border-[#645CFF] shadow-lg overflow-hidden flex items-center justify-center">
               
-              {/* Opción 1: Imagen local en `public/images/` (recomendada) */}
-              <Image
-                src="/images/about-image.png"
-                alt="Imagen sobre mí"
-                width={500}
-                height={500}
-                className="object-cover w-full h-full"
-                priority
-              />
-
-              {/* Opción 2: Imagen externa con `unoptimized` (solo si sigues usando una URL externa) */}
-              {/* 
               <Image
                 src="https://pablocalvente.es/images/about-image.png"
                 alt="Imagen sobre mí"
                 width={500}
                 height={500}
                 className="object-cover w-full h-full"
-                unoptimized={true}
+                unoptimized={true} // 🔹 Evita error 500 en Next.js
               />
-              */}
             </div>
           </div>
 
