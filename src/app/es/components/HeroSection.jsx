@@ -27,36 +27,38 @@ const HeroSection = () => {
 
       {/* Contenido principal */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto py-16 px-6 gap-12">
-        {/* Foto de perfil */}
+        
+        {/* Foto de perfil - Ajuste del diseño */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-1/3 flex justify-center"
+          className="flex justify-center items-center w-full md:w-1/3"
         >
-          <div className="relative w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#18BBB5] overflow-hidden shadow-lg">
+          <div className="relative w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-[#18BBB5] shadow-lg flex items-center justify-center">
             
-            {/* Opción 1: Usar imagen local en `public/images/` */}
-            {/* Reemplaza "src" con esta ruta si subiste la imagen a `public/images/` */}
+            {/* Opción 1: Imagen local en `public/images/` */}
             <Image
-              src="/images/profilephoto.png"
-              alt="Mi foto de perfil"
-              width={250}
-              height={250}
-              className="object-cover"
-              priority // Para que cargue más rápido
-            />
+            src="https://pablocalvente.es/images/profilephoto.png"
+            alt="Mi foto de perfil"
+            width={250}
+            height={250}
+            className="object-cover rounded-full"
+            unoptimized={true} // 🔹 Desactiva la optimización de Next.js para evitar error 500
+          />
 
-            {/* Opción 2: Usar imagen externa con `unoptimized` */}
-            {/* Usa esta opción si sigues con la imagen en `pablocalvente.es` */}
-            {/* <Image
+
+            {/* Opción 2: Imagen externa con `unoptimized` */}
+            {/* 
+            <Image
               src="https://pablocalvente.es/images/profilephoto.png"
               alt="Mi foto de perfil"
               width={250}
               height={250}
-              className="object-cover"
-              unoptimized={true} // Evita el error 500 de Next.js
-            /> */}
+              className="object-cover rounded-full"
+              unoptimized={true}
+            />
+            */}
 
           </div>
         </motion.div>
@@ -66,7 +68,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-2/3 flex flex-col items-center md:items-start"
+          className="w-full md:w-2/3 flex flex-col items-center md:items-start text-center md:text-left"
         >
           <h1 className="font-bold text-3xl md:text-5xl mb-4 leading-tight font-poppins">
             {/* Texto estático + animado */}
@@ -89,7 +91,7 @@ const HeroSection = () => {
               style={{ display: "inline-block" }}
             />
           </h1>
-          <p className="text-gray-300 text-center md:text-left text-base md:text-lg max-w-xl mb-6 leading-relaxed">
+          <p className="text-gray-300 text-base md:text-lg max-w-xl mb-6 leading-relaxed">
             Impulso negocios con datos. Especialista en Power BI, análisis de datos y optimización de decisiones estratégicas. Convierte tu información en resultados reales.
           </p>
 
