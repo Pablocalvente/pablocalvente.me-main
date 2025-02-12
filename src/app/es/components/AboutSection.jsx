@@ -70,34 +70,43 @@ const AboutSection = () => {
   };
 
   return (
-    /**
-     * Estructura similar al Hero:
-     * 1) "relative overflow-hidden" para colocar la forma diagonal.
-     * 2) Fondo oscuro "#0C0E12" + color de texto blanco.
-     */
     <section
       className="relative overflow-hidden bg-[#0C0E12] text-white py-16 px-4 md:px-8"
       id="about"
     >
-      {/* Contenedor principal (z-10 para estar sobre la forma diagonal) */}
+      {/* Contenedor principal */}
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Título centrado */}
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-12">
           Sobre mí
         </h2>
 
-        {/* Sección en dos columnas (imagen + texto/pestañas) */}
+        {/* Sección en dos columnas */}
         <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* Imagen */}
+          {/* Imagen con solución optimizada */}
           <div className="md:w-1/2 flex justify-center">
-            <div className="w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] rounded-lg border-4 border-[#645CFF] shadow-lg overflow-hidden">
+            <div className="w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] rounded-lg border-4 border-[#645CFF] shadow-lg overflow-hidden flex items-center justify-center">
+              
+              {/* Opción 1: Imagen local en `public/images/` (recomendada) */}
               <Image
                 src="/images/about-image.png"
                 alt="Imagen sobre mí"
                 width={500}
                 height={500}
                 className="object-cover w-full h-full"
+                priority
               />
+
+              {/* Opción 2: Imagen externa con `unoptimized` (solo si sigues usando una URL externa) */}
+              {/* 
+              <Image
+                src="https://pablocalvente.es/images/about-image.png"
+                alt="Imagen sobre mí"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+                unoptimized={true}
+              />
+              */}
             </div>
           </div>
 
